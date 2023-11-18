@@ -20,7 +20,7 @@ function Login() {
   const onSubmit = (e: any) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8085/auth", formData)
+      .post("https://mock-auth-backend.vercel.app/auth", formData)
       .then((res) => {
         if (res.status === 200) {
           if (
