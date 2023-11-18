@@ -1,4 +1,15 @@
+import { useSignOut } from "react-auth-kit";
+import { Link, useNavigate } from "react-router-dom";
+
 const Dashboard = () => {
+  const signOut = useSignOut();
+  const navigate = useNavigate();
+
+  const logout = () => {
+    signOut();
+    navigate("/");
+  };
+
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
@@ -8,7 +19,13 @@ const Dashboard = () => {
           <li className="mb-2 cursor-pointer hover:text-gray-300">Home</li>
           <li className="mb-2 cursor-pointer hover:text-gray-300">Profile</li>
           <li className="mb-2 cursor-pointer hover:text-gray-300">Settings</li>
-          <li className="mb-2 cursor-pointer hover:text-gray-300">Logout</li>
+          <Link
+            to="#"
+            onClick={logout}
+            className="mb-2 cursor-pointer hover:text-gray-300"
+          >
+            Logout
+          </Link>
         </ul>
       </div>
 
