@@ -74,7 +74,7 @@ function Login() {
                   id="identifier"
                   type="email"
                   placeholder="mail@loopple.com"
-                  className="flex items-center w-full px-5 py-4 mr-2 text-sm font-medium outline-none focus:bg-grey-400 mb-7 placeholder:text-grey-700 bg-zinc-100 text-dark-grey-900 rounded-2xl"
+                  className="flex items-center w-full px-5 py-4 mr-2 text-sm font-medium outline-none focus:bg-grey-400 mb-7 placeholder:text-grey-700 bg-gray-2 text-dark-grey-900 rounded-2xl"
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
@@ -86,12 +86,12 @@ function Login() {
                   id="password"
                   type="password"
                   placeholder="Enter a password"
-                  className="flex items-center w-full px-5 py-4 mb-5 mr-2 text-sm font-medium outline-none focus:bg-grey-400 placeholder:text-grey-700 bg-zinc-100 text-dark-grey-900 rounded-2xl"
+                  className="flex items-center w-full px-5 py-4 mb-5 mr-2 text-sm font-medium outline-none focus:bg-grey-400 placeholder:text-grey-700 bg-gray-2 text-dark-grey-900 rounded-2xl"
                   onChange={(e) =>
                     setFormData({ ...formData, password: e.target.value })
                   }
                 />
-                <button className="w-full px-6 py-5 mb-5 text-sm font-bold leading-none text-white transition duration-300 md:w-96 rounded-2xl hover:bg-purple-blue-600 focus:ring-4 focus:ring-purple-blue-100 bg-purple-700">
+                <button className="w-full px-6 py-5 mb-5 text-sm font-bold leading-none text-white transition duration-300 md:w-96 rounded-2xl focus:ring-4 bg-success">
                   Sign In
                 </button>
                 {errorMessage && (
