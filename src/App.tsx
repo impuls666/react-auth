@@ -9,13 +9,13 @@ function App() {
       <Routes>
         <Route path="/" Component={Login} />
         <Route
-          path="/dashboard"
+          path={"/dashboard"}
           element={
-            <RequireAuth loginPath="/">
+            <RequireAuth loginPath={"/"}>
               <Dashboard />
             </RequireAuth>
           }
-        ></Route>
+        />
       </Routes>
     </>
   );
